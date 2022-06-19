@@ -1,12 +1,13 @@
 $(document).ready(function () {
 
-  let brand_name = document.getElementsByClassName("a-spacing-small po-brand")[0].getElementsByClassName("a-span9")[0].innerText;
+  let brand = document.querySelectorAll('.a-spacing-small.po-brand .a-span9 .a-size-base')[0]
+  
 
 
-  if(is_from_nestle(brand_name)){
-    warn_user()
+  if(is_from_nestle(brand.innerText)){
+    warn_user(brand)
   }else{
-    console.log(brand_name+" is fine")
+    mark_company_as_legit(brand)
   }
 
 });
@@ -30,6 +31,14 @@ function is_from_nestle(name){
   return false
 }
 
-function warn_user(){
-  console.log(brand_name+" is from nestle")
+function warn_user(brand){
+  console.log(brand.innerText+" is from Nestlé")
+
+  brand.innerText = brand.innerText + " is from Nestle"
+  brand.style.color = "#FF0000"
+}
+
+function mark_company_as_legit(brand){
+  console.log(brand.innerText+" is NOT from Nestle")
+  brand.style.color = "#00D100"
 }
