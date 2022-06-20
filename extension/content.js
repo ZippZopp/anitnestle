@@ -33,12 +33,19 @@ function is_from_nestle(name){
 
 function warn_user(brand){
   console.log(brand.innerText+" is from Nestlé")
-
-  brand.innerText = brand.innerText + " is from Nestle"
+  if(brand.innerText !==  "Nestlé"){
+    brand.innerText = brand.innerText + " is from Nestlé"
+  }
   brand.style.color = "#FF0000"
+  inform_backgroundscirpt(true)
 }
 
 function mark_company_as_legit(brand){
-  console.log(brand.innerText+" is NOT from Nestle")
+  console.log(brand.innerText+" is NOT from Nestlé")
   brand.style.color = "#00D100"
+  inform_backgroundscirpt(false)
+}
+
+function inform_backgroundscirpt(is_company_from_nestle){
+  chrome.runtime.sendMessage({nestle: is_company_from_nestle})
 }
