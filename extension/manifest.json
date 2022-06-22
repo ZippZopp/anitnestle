@@ -3,7 +3,10 @@
   "version": "0.1",
   "manifest_version": 3,
   "icons": {
-"128": "nonestle.png"},
+    "16": "img/nonestle16.png",
+    "48": "img/nonestle48.png",
+    "128": "img/nonestle128.png"
+},
   "action": {
     "default_popup": "popup.html",
     "default_title": "show text info"

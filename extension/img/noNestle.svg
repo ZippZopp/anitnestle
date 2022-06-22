@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="80.395325mm"
+   height="80.395325mm"
+   viewBox="0 0 80.395325 80.395325"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="noNestle.svg"
+   inkscape:export-filename="Nestlee.svg"
+   inkscape:export-xdpi="82.24762"
+   inkscape:export-ydpi="82.24762"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="3.659624"
+     inkscape:cx="243.60426"
+     inkscape:cy="155.48045"
+     inkscape:window-width="3745"
+     inkscape:window-height="2126"
+     inkscape:window-x="3924"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="531.73712"
+       y="626.02771"
+       width="10.820232"
+       height="163.84921"
+       id="rect567" />
+    <rect
+       x="251.39195"
+       y="615.36377"
+       width="394.80908"
+       height="361.30087"
+       id="rect561" />
+    <rect
+       x="114.76589"
+       y="578.20148"
+       width="413.1572"
+       height="371.62289"
+       id="rect555" />
+    <rect
+       x="276.53113"
+       y="625.20087"
+       width="25.139194"
+       height="108.20784"
+       id="rect549" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.57880783,-0.24353027)">
+    <circle
+       style="fill:#66ff00;stroke-width:0.264583"
+       id="path61"
+       cx="40.77647"
+       cy="40.441193"
+       r="40.197662" />
+    <circle
+       style="fill:#ffffff;stroke-width:0.264583"
+       id="path171"
+       cx="40.77647"
+       cy="40.441193"
+       r="34.775314" />
+    <text
+       xml:space="preserve"
+       style="font-size:16.9333px;white-space:pre;inline-size:101.934;display:inline;fill:#ffffff;stroke-width:0.264583"
+       x="73.743912"
+       y="166.57449"
+       id="text493"><tspan
+         x="73.743912"
+         y="166.57449"
+         id="tspan1614">
+</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text547"
+       style="font-size:64px;white-space:pre;shape-inside:url(#rect549);display:inline;fill:#ffffff" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text553"
+       style="font-size:64px;white-space:pre;shape-inside:url(#rect555);display:inline;fill:#ffffff"><tspan
+         x="114.76562"
+         y="636.59031"
+         id="tspan1616">N
+</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text565"
+       style="font-size:24px;white-space:pre;shape-inside:url(#rect567);display:inline;fill:#ffffff" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:Arial;white-space:pre;inline-size:64.2556;display:inline;fill:#000000;stroke-width:0.264583"
+       x="61.960316"
+       y="164.00058"
+       id="text573"
+       transform="matrix(1.6473695,0,0,1.3818303,-91.313272,-160.87857)"><tspan
+         x="61.960316"
+         y="164.00058"
+         id="tspan1620"><tspan
+   style="font-size:50.8px"
+   id="tspan1618">N</tspan>
+</tspan></text>
+    <circle
+       id="path1494"
+       style="fill:#66ff00;stroke:#000000;stroke-width:0.264583"
+       cx="40.270386"
+       cy="41.453365"
+       r="0.0096300161" />
+    <circle
+       id="path1496"
+       style="fill:#66ff00;stroke:#000000;stroke-width:0.264583"
+       cx="41.210258"
+       cy="41.814854"
+       r="0.0096300161" />
+    <circle
+       id="path1498"
+       style="fill:#66ff00;stroke:#000000;stroke-width:0.264583"
+       cx="41.210258"
+       cy="41.814854"
+       r="0.0096300161" />
+    <circle
+       id="path1500"
+       style="fill:#66ff00;stroke:#000000;stroke-width:0.264583"
+       cx="41.065662"
+       cy="42.104042"
+       r="0.0096300161" />
+    <circle
+       id="path1502"
+       style="fill:#66ff00;stroke:#000000;stroke-width:0.264583"
+       cx="41.065662"
+       cy="42.104042"
+       r="0.0096300161" />
+    <path
+       style="fill:#66ff00;stroke-width:0.264583"
+       d="M 9.616052,61.335303 C 68.032799,13.401758 67.960501,13.401758 67.960501,13.401758 l 4.843963,6.36222 -58.055257,48.80112 z"
+       id="path1546" />
+  </g>
+</svg>

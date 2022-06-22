@@ -2,8 +2,6 @@ $(document).ready(function () {
 
   let brand = document.querySelectorAll('.a-spacing-small.po-brand .a-span9 .a-size-base')[0]
   
-
-
   if(is_from_nestle(brand.innerText)){
     warn_user(brand)
   }else{
@@ -37,6 +35,8 @@ function warn_user(brand){
     brand.innerText = brand.innerText + " is from Nestlé"
   }
   brand.style.color = "#FF0000"
+
+
   inform_backgroundscirpt(true)
 }
 
@@ -49,3 +49,4 @@ function mark_company_as_legit(brand){
 function inform_backgroundscirpt(is_company_from_nestle){
   chrome.runtime.sendMessage({nestle: is_company_from_nestle})
 }
+
