@@ -31,22 +31,78 @@ function is_from_nestle(name){
 
 function warn_user(brand){
   console.log(brand.innerText+" is from Nestlé")
-  if(brand.innerText !==  "Nestlé"){
+  /*if(brand.innerText !==  "Nestlé"){
     brand.innerText = brand.innerText + " is from Nestlé"
-  }
+  }*/
+
   brand.style.color = "#FF0000"
-
-
-  inform_backgroundscirpt(true)
+  insert_logo(brand,is_from_nestle=true)
+  inform_backgroundscirpt(is_from_nestle=true)
 }
 
 function mark_company_as_legit(brand){
   console.log(brand.innerText+" is NOT from Nestlé")
-  brand.style.color = "#00D100"
-  inform_backgroundscirpt(false)
+  
+  //brand.style.color = "#00D100"
+  insert_logo(brand,is_from_nestle=false)
+  inform_backgroundscirpt(is_from_nestle=false)
 }
 
-function inform_backgroundscirpt(is_company_from_nestle){
-  chrome.runtime.sendMessage({nestle: is_company_from_nestle})
+function inform_backgroundscirpt(is_from_nestle){
+  chrome.runtime.sendMessage({nestle: is_from_nestle})
+}
+
+function insert_logo(brand,is_from_nestle){
+  var img = document.createElement("img");
+
+  if(is_from_nestle === true){
+    img.src = chrome.runtime.getURL("img/Nestle.svg");
+  }else{
+    img.src = chrome.runtime.getURL("img/noNestle.svg");
+  }
+  
+  img.style.height = "1em";
+  brand.after(img);
+
+  display_info_on_hover(brand,img,is_from_nestle=is_from_nestle)
+
+}
+
+function display_info_on_hover(brand,img,is_from_nestle){
+  const newDiv = document.createElement("div");
+  newDiv.innerText = create_suitable_infotext(brand,is_from_nestle)
+  newDiv.style.position = "absolute"
+  newDiv.style.visibility = "hidden"
+  newDiv.style.letterSpacing = "1px"
+  newDiv.style.boxShadow = "0 1px 2px 1px rgba( 0, 0, 0, 0.4 )"
+
+  if(is_from_nestle === true){
+    newDiv.style.backgroundColor = "#FF0000"
+  }else{
+    newDiv.style.backgroundColor = "#00FF00"
+  }
+
+  document.body.appendChild(newDiv);
+
+  img.onmouseover = function(event){
+    console.log(event.pageX)   
+    newDiv.style.left = event.pageX- 100  + "px"
+    newDiv.style.top = event.pageY+10 + "px"
+    newDiv.style.visibility = "visible";
+    newDiv.style.padding = "10px 10px 10px 10px";
+    newDiv.style.borderRadius = "5px";
+  };
+  
+  img.onmouseout = function(){	
+    newDiv.style.visibility = "hidden"};
+
+}
+
+function create_suitable_infotext(brand,is_from_nestle){
+  if(is_from_nestle === true){
+    return brand.innerText + " is related to Nestlé"
+  }else{
+    return brand.innerText + " is NOT related to Nestlé"
+  }
 }
 

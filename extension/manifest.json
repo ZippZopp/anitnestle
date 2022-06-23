@@ -7,6 +7,13 @@
     "48": "img/nonestle48.png",
     "128": "img/nonestle128.png"
 },
+
+
+"web_accessible_resources": [{
+  "resources": ["img/Nestle.svg", "img/noNestle.svg"],
+  "matches": ["<all_urls>"]
+}],
+
   "action": {
     "default_popup": "popup.html",
     "default_title": "show text info"
