@@ -1,13 +1,16 @@
 $(document).ready(function () {
 
   let brand_element = document.querySelectorAll('.a-spacing-small.po-brand .a-span9 .a-size-base')[0]
-  
-  if(is_from_nestle(brand_element.innerText)){
-    warn_user(brand_element)
-  }else{
-    mark_company_as_legit(brand_element)
-  }
 
+  if(brand_element) {
+    if(is_from_nestle(brand_element.innerText)){
+      warn_user(brand_element)
+    }else{
+      mark_company_as_legit(brand_element)
+    }
+  }else{
+    inform_backgroundscirpt(is_from_nestle=false) //is_from_nestle  is false because there is nothing to warn about
+  }
 });
 
 function is_from_nestle(name){
@@ -85,8 +88,7 @@ function display_info_on_hover(brand_element,img,is_from_nestle){
 
   document.body.appendChild(newDiv);
 
-  img.onmouseover = function(event){
-    console.log(event.pageX)   
+  img.onmouseover = function(event){ 
     newDiv.style.left = event.pageX- 135  + "px"
     newDiv.style.top = event.pageY+10 + "px"
     newDiv.style.visibility = "visible";
@@ -101,9 +103,9 @@ function display_info_on_hover(brand_element,img,is_from_nestle){
 
 function create_suitable_infotext(brand_element,is_from_nestle){
   if(is_from_nestle === true){
-    return brand_element.innerText + " is related to Nestlé"
+    return brand_element.innerText + " is probably related to Nestlé"
   }else{
-    return brand_element.innerText + " is NOT related to Nestlé"
+    return brand_element.innerText + " is probably NOT related to Nestlé"
   }
 }
 
