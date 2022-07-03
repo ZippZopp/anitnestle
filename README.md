@@ -5,7 +5,7 @@ a chrome extension which detectes nestle related products when shopping online.
 If you want to know, why you maybe should avoid buying nestle products, you can watch [this video](https://www.youtube.com/watch?v=MoKLovtnbGY&ab_channel=OrdinaryThings).
 
 
-## Contributing
+## Contributing ![Issues](https://img.shields.io/github/issues/ZippZopp/anitnestle)
 
 Contributions are always welcome!
 
