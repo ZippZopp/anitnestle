@@ -1,4 +1,4 @@
-# Antinestle[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+# Antinestle [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 
 a chrome extension which detectes nestle related products when shopping online.
 
