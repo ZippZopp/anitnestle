@@ -1,7 +1,3 @@
-
-
-console.log('background running');
-
 var tab_logo = {};
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
@@ -12,7 +8,9 @@ chrome.runtime.onMessage.addListener(
 
 chrome.tabs.onActivated.addListener(function(activeInfo) {
   chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
-    change_icon(tab_logo[tabs[0].url])
+    chrome.tabs.sendMessage(tabs[0].id, {want_info: "nestle"}, function(response) {
+      change_icon(response.is_from_nestle)
+    });
 });
 });
 

@@ -9,7 +9,7 @@ $(document).ready(function () {
       mark_brand_as_legit(brand_element)
     }
   }else{
-    inform_backgroundscirpt(is_from_nestle=false) //is_from_nestle  is false because there is nothing to warn about
+    change_icon(is_from_nestle=false) //is_from_nestle  is false because there is nothing to warn about
   }
 });
 
@@ -39,21 +39,28 @@ function is_from_nestle(name){
 }
 
 function warn_user(brand_element){
-  //console.log(brand_element.innerText+" is probably from Nestlé")
   brand_element.style.color = "#FF0000"
   insert_logo(brand_element,is_from_nestle=true)
-  inform_backgroundscirpt(is_from_nestle=true)
+  change_icon(is_from_nestle=true)
 }
 
 function mark_brand_as_legit(brand_element){
-  //console.log(brand_element.innerText+" is probably NOT from Nestlé")
   //brand_element.style.color = "#00D100"
   insert_logo(brand_element,is_from_nestle=false)
-  inform_backgroundscirpt(is_from_nestle=false)
+  change_icon(is_from_nestle=false)
 }
 
-function inform_backgroundscirpt(is_from_nestle){
+function change_icon(is_from_nestle){
+  //send message to backgroundscript  to change icon
   chrome.runtime.sendMessage({nestle: is_from_nestle})
+  //gives the script information on request, about whether the page contains nestle products
+  chrome.runtime.onMessage.addListener(
+    function(request, sender, sendResponse) {
+      if (request.want_info == "nestle")
+        sendResponse({is_from_nestle: is_from_nestle});
+    }
+  );
+
 }
 
 function insert_logo(brand_element,is_from_nestle){
